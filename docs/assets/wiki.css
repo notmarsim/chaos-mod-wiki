@@ -1,0 +1,17 @@
+:root { --rift-purple: #a98aff; --rift-cyan: #58ddd6; }
+body { line-height: 1.7; }
+h1, h2, h3 { letter-spacing: -.025em; }
+h1 { border-bottom: 2px solid var(--rift-purple); padding-bottom: .55rem; }
+.hero { border: 1px solid #7356b0; border-radius: 16px; padding: 2rem; margin: 1rem 0 2rem; background: linear-gradient(125deg, #25183b, #122a36); color: #f3edff; }
+.hero h2 { color: #fff; margin-top: 0; }
+.hero a { color: #8eeae4; }
+.language-links { display: flex; flex-wrap: wrap; gap: 1rem; margin: 1.5rem 0; }
+.language-links a { padding: .7rem 1.3rem; border: 1px solid var(--rift-purple); border-radius: 9px; font-weight: 600; text-decoration: none; }
+.language-links a:hover { background: #7356b033; }
+table { display: block; max-width: 100%; overflow-x: auto; font-variant-numeric: tabular-nums; }
+th { white-space: nowrap; }
+pre { border-left: 3px solid var(--rift-purple); }
+.admonition { border-left: 3px solid var(--rift-cyan); padding: .75rem 1rem; margin: 1.5rem 0; background: #58ddd60c; }
+.admonition.warning { border-color: #f5b35d; background: #f5b35d0c; }
+.admonition-title { font-weight: 700; }
+@media (max-width: 600px) { .hero { padding: 1.2rem; } }

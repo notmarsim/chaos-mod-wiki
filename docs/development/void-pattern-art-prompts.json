@@ -1,0 +1,12 @@
+{
+  "mode": "built-in image_gen",
+  "assets": [
+    "src/main/resources/assets/chaosmod/textures/item/blank_void_pattern.png",
+    "src/main/resources/assets/chaosmod/textures/item/void_recipe_pattern.png"
+  ],
+  "prompts": [
+    "Use case: stylized-concept. Create a single Minecraft mod inventory item sprite, Blank Void Pattern, on a genuinely transparent background. Crisp chunky pixel art, apparent 32x32 pixel grid, front-facing isolated square data wafer with a clipped top-right corner. Thick charcoal black Void-metal rim, silver gray bevels, pale gray blank paper-like inner surface, a few dark circuit contacts along the bottom. Empty unencoded center, no glowing symbols. Palette charcoal, graphite, silver and muted off-white, crafted from paper, dark Void bars and gray circuit board. Clear silhouette readable at inventory size, occupy 80% square canvas, no text, no letters, no numbers, no perspective, no background, no exterior shadow, no smooth gradients. One finished game sprite, not a mockup or sheet.",
+    "Use case: stylized-concept. Create a single Minecraft mod inventory item sprite, Encoded Void Recipe Pattern, on a genuinely transparent background. Crisp chunky pixel art, apparent 32x32 pixel grid, front-facing isolated square data wafer with a clipped top-right corner. Thick charcoal black Void-metal rim, silver gray bevels, pale gray paper-like inner surface, dark circuit contacts along the bottom. In the center show a bold dark graphite 3 by 3 recipe-grid symbol connected by a short cyan trace to one bright cyan output square below: clearly an encoded crafting recipe. Palette charcoal, graphite, silver, muted off-white with restrained cyan encoded details. Clear silhouette readable at inventory size, occupy 80% square canvas, no text, no letters, no numbers, no perspective, no background, no exterior shadow, no smooth gradients. One finished game sprite, not a mockup or sheet."
+  ],
+  "postprocessing": "User-authorized local conversion to 64x64 RGBA with nearest-neighbor resampling. Original generated images preserved in the generated_images directory."
+}

@@ -100,3 +100,11 @@ Hostile geometry coverage also includes Zombie Villagers, Giants, all three With
 All three generated item textures (Module, blank Pattern and encoded Pattern) are packaged at 64×64 with transparency, as approved by the user.
 
 Zenith upgrades from level 0 to 21 consume 64 bars per upgradeable item: 2 bars for each of levels 1–5, 3 for 6–15, and 4 for 16–21. Further upgrades remain available, increasing cost every six levels. Existing levels are preserved. Zenith reference damage is 95 including Strength I; armor and toughness respect vanilla caps (30/20), with Resistance I. Chaos reference damage is 162 including Strength IV.
+
+## Thermal protection and module capacity
+
+Items registered with Darklight/Nova/Zenith/Chaos/Chaotic tier prefixes, including block items and machine modules, use vanilla fire-resistant item properties. Each correctly equipped armor piece from the four upper armor tiers gives 25% fire-tagged damage reduction; a mixed full set cancels fire-tagged attacks. Generic tier armor reductions skip fire damage to avoid double-counting this rule. Other vanilla mitigation still applies.
+
+Machine module demand is a shared budget of three native-tier modules: 3/6/6/12/24/48/96. Each kind's coverage is its installed power divided by the larger of budget and total installed power. This preserves old overweight inventories while scaling their combined benefits to at most 100% coverage. New insertion rejects overweight configurations; each slot still holds one module.
+
+Basic stability loss is one internal unit per normal working tick without modules (40,000 maximum); three matching stability modules reduce it to 0.25. Fractional loss and whether the prior tick worked are saved. Recovery skips a tick after work, preventing the previous recovery/consumption equilibrium during sustained operation.

@@ -1,0 +1,6 @@
+{
+  "mode": "built-in image_gen",
+  "prompt": "Use case: stylized-concept. Create one Minecraft inventory item sprite, Dimensional Guardian Core: a futuristic compact energy containment core, white luminous faceted center surrounded by disconnected graphite and silver crystalline armor plates with tiny circuit notches. Science fiction dimensional technology, no fantasy jewelry, no runes, no text, no character. Strict grayscale only (white, silver, charcoal), to be tinted by software into nine elemental tier colors. Chunky crisp pixel art, intended 64x64 game texture, front-facing square composition, isolated centered silhouette with generous transparent margin, no background, no exterior glow beyond silhouette, no smooth gradients. Output transparent background; one icon only.",
+  "asset": "src/main/resources/assets/chaosmod/textures/item/dimensional_guardian_core.png",
+  "postprocessing": "User-approved 64x64 RGBA nearest-neighbor resize; original preserved. Nine item variants use the same grayscale sprite with runtime tier colors."
+}

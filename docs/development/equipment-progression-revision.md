@@ -1,0 +1,14 @@
+# Equipment and progression revision
+
+- Advanced Darklight/Nova/Zenith ores and deposits require a Chaos Mod pickaxe of the existing minimum mining tier. Player, fake-player and explosion guards prevent ordinary external-tool harvesting; the deposits are also blacklisted for Mekanism's Digital Miner. Creative building remains unrestricted. Mods that directly replace blocks without Forge break events cannot be intercepted by these event guards.
+- Void and Stellar bows/shields are retired from recipes, creative tabs and JEI. Registry IDs remain available so existing inventories and saves still load.
+- New equipment chain: vanilla → Unstable → Stable → Duality → Darklight → Nova → Zenith. Each 9×9 Void Station recipe uses current-tier bars and the previous equipment, following the shield/bow silhouettes. Bows also use string.
+- Chaos Shield: Chaos Anvil, 50 Chaos Bars + 25 Chaos Orbs + 35 Chaotic Cores + 5 completed Chaos Reality Cores.
+- Chaos Bow: Chaos Anvil, 25 Chaos Bars + 15 Chaos Orbs + 30 Chaotic Cores + 3 completed Chaos Reality Cores + 9 string. Recipe synchronization supports an optional fifth ingredient; old four-ingredient JSON remains valid. Allocation is checked before any ingredients or energy are consumed.
+- Chaos Shield ability: configurable G key, shield held in either hand, pulls living mobs within 24 blocks for three seconds, then annihilates those in range. The blast does not target players or modify blocks. Base cooldown: 60 seconds; compatible cooldown augmentation applies. Ordinary blocking remains usable. Unequipping, changing dimension, dying or logging out cancels the active charge without refunding cooldown.
+- Chaos Bow: fires immediately at full draw, then once every two game ticks while use is held. Normal arrow availability, consumption, Infinity and enchantment hooks remain in effect. Releasing does not fire an extra arrow.
+- Bows and shields use native 3D meshes with colored material on both sides and tier material textures in every pose. The Dimensional Augmentor now uses Darklight metal, circuits, capacitor columns and a machine-casing base. Regenerate shared geometry with `tools/BuildTierEquipmentModels.py`; datagen owns tier item models and recipes.
+- Slime and magma-cube split children preserve their parent's affinity. Existing generated labels are repaired against stored affinity, and existing tiered mobs retain their affinity when moving between Reality regions.
+- Module powers: Basic 1, Void 2, Stellar 3, Darklight 4, Nova 8, Zenith 16, Chaotic 32. Machine capacity is three times its own module power; Stellar modules now exceed Void modules. Weaker modules still work proportionally. Legacy excess installations are preserved but normalized to the power budget.
+
+Client and server must both update: recipe network protocol is now 4.9.

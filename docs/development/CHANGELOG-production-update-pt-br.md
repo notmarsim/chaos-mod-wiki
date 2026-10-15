@@ -77,3 +77,31 @@
 - Balanceamento Zenith usa espada e set completo no nível 21, incluindo os efeitos da armadura.
 - Cada item Zenith com upgrades consome 64 Zenith Bars no total para ir do nível 0 ao 21. Upgrades posteriores continuam disponíveis; níveis existentes são preservados.
 - Chaos Axe passa a ter 150 de dano base (162 com Strength IV do set Chaos). A vida dos mobs Chaos da tabela foi recalculada com essa referência.
+
+## Proteção térmica, módulos e estabilidade
+
+- Itens Darklight, Nova, Zenith e Chaos/Chaotic resistem a fogo e lava quando derrubados.
+- Cada peça de armadura Darklight, Nova, Zenith ou Chaos reduz dano de fogo/lava em 25%. Quatro peças dão imunidade, inclusive misturando tiers.
+- Módulos compartilham uma capacidade total equivalente a três módulos do tier da máquina. É possível repetir ou misturar tipos e usar módulos inferiores com efeito proporcional.
+- O tooltip mostra a potência total instalada e a capacidade compartilhada. Instalações antigas são preservadas, com efeitos limitados à capacidade.
+- Estabilidade deixa de se regenerar durante trabalho contínuo. Basic sem módulos perde aproximadamente 3% por minuto de produção contínua com calibração ideal e velocidade normal; em repouso, recupera estabilidade.
+- Perdas fracionárias de estabilidade são persistidas, permitindo que módulos de Stability tenham efeito mesmo nas máquinas Basic.
+
+## Breach Stability e Dimensional Guardian
+
+- Aumentadas moderadamente as chances de crescimento das Rifts até Dimensional Breach.
+- Breaches passam a ter estabilidade: Relatively Stable, Unstable Breach, Critical Instability e Dimensional Collapse.
+- Quanto menor a estabilidade, maiores as ondas de criaturas e a intensidade da contaminação, mantendo limites de processamento.
+- Adicionado Dimensional Guardian, exclusivo do colapso de uma Breach, com modelo 3D maior que um Iron Golem e nove afinidades compartilhando a mesma entidade.
+- Cada afinidade possui comportamento tecnológico próprio, incluindo gravidade, plasma, escudos, descarga, ondas de choque e distorção espacial.
+- Adicionados nove Dimensional Guardian Cores, com desenho próprio e cor por tier. São drops do boss e ainda não possuem receitas ou uso.
+- Breaches antigas recebem 100% de estabilidade; tempo descarregado não causa colapso retroativo.
+
+
+## Dimensional Augmentor e equipamentos
+
+- Corrigida a bossbar do Dimensional Guardian permanecendo após a morte.
+- Adicionado Dimensional Augmentor com 27 aprimoramentos permanentes por jogador, estatísticas, custos progressivos em Guardian Cores/FE e expansão Chaos até nível 25.
+- Receita 9×9 com componentes Darklight na Void Station; traduções em português e inglês.
+- Adicionados arcos e escudos dos nove tiers, modelos 3D e poses de uso com cores de cada tier.
+- Escudos com 1,4× a durabilidade do peitoral de referência; equipamentos Chaos indestrutíveis e Darklight em diante resistentes a fogo/lava.

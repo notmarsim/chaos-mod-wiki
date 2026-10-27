@@ -15,15 +15,15 @@
 1. Put materials into shared storage, manually or through pipes.
 2. Use JEI's transfer button to configure a recipe and transfer available ingredients from your inventory. Alternatively, click a ghost slot while holding an item; right-click clears that ghost without consuming the held item.
 3. Click **Craft** to put a completed manual result in the output. No module or pattern is required. Crafting-table and native 9×9 recipes remain distinct and are validated by their actual recipe implementation. Polymorph remains the conflict selector.
-4. For automation, install the module and encode blank patterns. Use the nine patterns as the library, including intermediate recipes. Select the final recipe, switch to Automation, choose a mode and Start.
+4. For automation, install the module and encode blank patterns. Insert an encoded pattern in the encoding slot to overwrite that item in place. Use the nine patterns as the library, including intermediate recipes. Select the final recipe, switch to Automation, choose a mode and Start.
 5. **Selected** requests the displayed quantity, rounded up to complete recipe batches. **Auto Repeat** continually plans one final recipe batch. **Auto Stock** targets the output-slot quantity. +/- changes the requested amount; Shift changes it by 64. The allowed request range is 1–4096, subject to the plan limit.
-6. Cancel keeps completed products and intermediate materials. Storage and pattern removal are locked during a queued plan; incoming items are accepted. Output can always be extracted. If output or intermediate storage becomes full, the current operation pauses without partial consumption.
+6. Cancel keeps completed products and intermediate materials. Reserved slots and pattern removal are locked during a queued plan; unreserved materials remain available and incoming items are accepted. Output can always be extracted. If output or intermediate storage becomes full, the current operation pauses without partial consumption.
 
 ## Planning and persistence
 
 `StationCraftPlan` plans against a private inventory copy. A plan is limited to 16 dependency levels, 256 operations and a finite search budget. Matching handles repeated/alternative ingredients and preserves shared materials where possible. Candidate dependencies are checked for cycles; the finished plan is replayed against the original snapshot before acceptance to verify intermediate storage and returned containers. The real inventory is not touched by planning.
 
-Each queued operation consumes a complete validated ingredient set and commits remainders plus its result atomically. Intermediates return to shared storage; only terminal products enter output. Existing timing is preserved: one automatic operation every 10 server ticks while machine controls permit work. The original Void Station has no FE crafting charge; this update does not introduce one. Cancellation releases reservations without rolling back completed recipes. Queues persist recipe IDs, concrete ingredient grids, progress and terminal/intermediate flags.
+Each queued operation consumes a complete validated ingredient set and commits remainders plus its result atomically. Intermediates and returned containers use a private nine-stack crafting buffer, never shared storage; only terminal products enter output. Requests run in on-demand batches. Logical per-slot reservations protect upcoming ingredients; manual crafting uses only unreserved stock. Existing timing is preserved: one automatic operation every 10 server ticks while machine controls permit work. The original Void Station has no FE crafting charge; this update does not introduce one. Cancellation releases reservations without rolling back completed recipes. Queues persist recipe IDs, concrete ingredient grids, progress, reservations, private buffer contents and terminal/intermediate flags. Cancellation returns buffer items to input, then an empty output, retaining unplaceable items in bounded recovery and blocking new automation until recovered.
 
 The Forge item capability exposes 81 input slots and the output slot. External extraction is allowed only from output. This prevents other mods from removing reserved materials. No Create Mechanical Crafter integration was added for exclusive 9×9 recipes. JEI transfers use a dedicated server-validated recipe-ID packet instead of transferring real items into ghost slots.
 
@@ -162,3 +162,13 @@ The five supplied MP3 files were converted to mono 44.1 kHz Vorbis OGG. Loops st
 - Forge conversion events carry the original tier and custom names into the new species, refresh generated names and recompute species-specific stats. Cached stats now include the entity type.
 
 Validation: final build successful; all 167 GameTests passed, including legacy conversion repair. Client-side visual review was not performed.
+
+
+## Reload and routing corrections
+
+Router capabilities are recreated on revival. Saved face settings and cursors survive reload; cable directions are synchronized with router faces, respecting explicit disconnections. Transient missing machine capabilities and unloaded neighboring chunks no longer erase saved cable modes. High-tier routing uses cable pulse frequency and pump rate, splitting large pulses into stack packets. Visual transfer speed follows the cable tier per path segment.
+
+
+## Manual crafting controls
+
+Drag an item across the 9x9 grid to paint recipe cells without consuming the cursor stack. Drag with an empty cursor to clear cells, or use Clear for the whole grid. Manual crafting draws exclusively from the unreserved shared inventory. The quantity field requests up to 4096 output items, stopping at complete recipe batches, available ingredients or player inventory space. Shift-click the manual result or Craft to produce at most one normal item stack (or fewer when resources are insufficient). Bulk results go directly to the player's inventory. Quantities use a dedicated server-validated VarInt packet, because vanilla menu button IDs are signed bytes.

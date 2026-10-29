@@ -34,6 +34,23 @@ A interação agachado com o Configurator configura faces dos blocos compatívei
 
 Defina a prioridade dos consumidores como **HIGH**, **NORMAL** ou **LOW** no Controller. A rede atende primeiro as maiores prioridades e divide a energia dentro de cada prioridade. Transferências diretas entre blocos seguem a própria lógica.
 
+## Cabos de fluidos
+
+Os Fluid Cables transportam líquidos entre tanques e máquinas compatíveis com Forge, incluindo o Stellar Liquefier e o Stellar Reactor. São uma rede separada dos cabos de itens e energia e podem ser colocados na água.
+
+| Tier | Limite de transporte |
+| --- | ---: |
+| Basic | 250 mB/t |
+| Void | 1.000 mB/t |
+| Darklight | 4.000 mB/t |
+| Nova | 16.000 mB/t |
+| Zenith | 64.000 mB/t |
+| Chaos | 256.000 mB/t |
+
+Use o Configurator na conexão junto ao tanque de origem e escolha **Puxar**. As conexões com tanques de destino começam em **Enviar**. Também há os modos **Puxar/Enviar** e **Desconectado**. Trechos conectados compartilham capacidade; um trecho de tier inferior limita as rotas que passam por ele. Trechos descarregados não transferem fluido nem carregam chunks.
+
+A receita Basic segue o Basic Transporter, com um **balde vazio** no lugar do circuito, e produz oito cabos. Na Void Station, cerque um balde vazio com oito Fluid Cables do tier anterior para fabricar oito do próximo tier. O JEI mostra as seis receitas.
+
 ## Mantenha uma área carregada
 
 O **Dimensional Anchor** é um carregador de chunks alimentado por energia, diferente do Reality Anchor vivo das Breaches. Configure-o pelo Controller. Ele suporta áreas quadradas de **3×3 até 10×10 chunks**, consumindo `1.000 × lado³ FE/t`: de 27.000 FE/t em 3×3 a 1.000.000 FE/t em 10×10. Seu buffer armazena 256 milhões de FE.

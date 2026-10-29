@@ -30,6 +30,7 @@ nav:
       - Energy and automation: en/energy.md
       - Machines and upgrades: en/machines.md
       - Controller and calibration: en/controller.md
+      - Stellar Liquefier and Reactor: en/stellar-energy.md
       - Nova Reactor: en/reactor.md
       - Zenith Accelerator: en/accelerator.md
       - Gateway: en/gateway.md
@@ -47,6 +48,7 @@ nav:
       - Energia e automação: pt/energy.md
       - Máquinas e upgrades: pt/machines.md
       - Controller e calibração: pt/controller.md
+      - Liquefier e Reactor Stellar: pt/stellar-energy.md
       - Nova Reactor: pt/reactor.md
       - Zenith Accelerator: pt/accelerator.md
       - Gateway: pt/gateway.md

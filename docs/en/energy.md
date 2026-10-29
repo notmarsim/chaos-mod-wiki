@@ -34,6 +34,23 @@ The Configurator's sneak interaction configures supported block faces. Check fac
 
 Set consumer priority to **HIGH**, **NORMAL** or **LOW** in the Controller. The cable network serves higher priorities first and shares energy within a priority. Direct block-to-block transfers use their own logic.
 
+## Fluid cables
+
+Fluid Cables transport liquids between Forge-compatible tanks and machines, including the Stellar Liquefier and Stellar Reactor. They are separate from item transporters and energy cables, and can be waterlogged.
+
+| Tier | Transfer limit |
+| --- | ---: |
+| Basic | 250 mB/t |
+| Void | 1,000 mB/t |
+| Darklight | 4,000 mB/t |
+| Nova | 16,000 mB/t |
+| Zenith | 64,000 mB/t |
+| Chaos | 256,000 mB/t |
+
+Use the Configurator on the connection beside the source tank and choose **Pull**. Connections to destination tanks default to **Push**. Other modes are **Pull/Push** and **Disconnected**. Connected cable sections share capacity; a lower-tier section limits routes that pass through it. Unloaded sections do not transfer fluid or load chunks.
+
+The Basic recipe matches the Basic Transporter recipe with an **empty bucket** replacing the circuit and produces eight cables. In the Void Station, surround an empty bucket with eight previous-tier Fluid Cables to craft eight of the next tier. JEI lists all six recipes.
+
 ## Keep an area loaded
 
 The **Dimensional Anchor** is a powered chunk loader, not a Breach's living Reality Anchor. Configure it through the Controller. It supports square areas from **3×3 to 10×10 chunks**, with a cost of `1,000 × side³ FE/t`: 27,000 FE/t for 3×3, up to 1,000,000 FE/t for 10×10. Its buffer holds 256 million FE.

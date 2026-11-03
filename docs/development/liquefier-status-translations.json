@@ -1,0 +1,10 @@
+{
+  "en_us": {
+    "gui.chaosmod.stellar.state.liquefying": "Liquefying Stellar matter",
+    "gui.chaosmod.stellar.state.liquefying_darklight": "Liquefying Darklight matter"
+  },
+  "pt_br": {
+    "gui.chaosmod.stellar.state.liquefying": "Liquefazendo matéria Stellar",
+    "gui.chaosmod.stellar.state.liquefying_darklight": "Liquefazendo matéria Darklight"
+  }
+}

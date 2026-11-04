@@ -31,6 +31,7 @@ nav:
       - Machines and upgrades: en/machines.md
       - Controller and calibration: en/controller.md
       - Stellar Liquefier and Reactor: en/stellar-energy.md
+      - Matter Inversion Chamber: en/matter-inversion.md
       - Nova Reactor: en/reactor.md
       - Zenith Accelerator: en/accelerator.md
       - Gateway: en/gateway.md
@@ -49,6 +50,7 @@ nav:
       - Máquinas e upgrades: pt/machines.md
       - Controller e calibração: pt/controller.md
       - Liquefier e Reactor Stellar: pt/stellar-energy.md
+      - Matter Inversion Chamber: pt/matter-inversion.md
       - Nova Reactor: pt/reactor.md
       - Zenith Accelerator: pt/accelerator.md
       - Gateway: pt/gateway.md

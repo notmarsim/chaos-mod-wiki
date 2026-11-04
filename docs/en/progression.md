@@ -37,11 +37,9 @@ Once you reach Duality, craft a **Duality Pickaxe**. Find **Darklight Ore** and 
 
 ## Nova
 
-![Antimatter Block](../assets/antimatter_block.png)
+Material requirements increase substantially at this stage. First, construct the **Matter Inversion Chamber** to invert **Stellar Liquid** and **Darklight Liquid** into **Antimatter**.
 
-Material requirements increase substantially at this stage. First, find an **Antimatter Block** and mine it with a **Darklight Pickaxe**. It drops **Antimatter**, which can be used to generate more **Antimatter Blocks** or as a crafting ingredient.
-
-To reach **Nova**, craft a **Blackhole**, then drop **1 Blackhole** and **64 Darklight Bars** together to obtain **1 Nova Fragment**.
+Next, construct the **Event Horizon Forge**. Use it to condense Antimatter into a **Black Hole** (Singularity Condensation), and then use the Black Hole to transmute **Darklight Bars** into **Nova Fragments** (Event Horizon Transmutation).
 
 ## Zenith
 

@@ -37,11 +37,9 @@ você deverá encontrar o **Darklight Ore** e quebrá-lo com essa picareta, adqu
 
 ## Nova
 
-![Antimatter Block](../assets/antimatter_block.png)
+Aqui o consumo de material escala muito. Primeiramente, construa a **Matter Inversion Chamber** para inverter **Stellar Liquid** e **Darklight Liquid** em **Antimatter**.
 
-Aqui o consumo de material escala muito. Primeiramente você deve encontrar o **Antimatter Block** e quebrá-lo com a **Darklight Pickaxe**, esse bloco dropa **Antimatter**, 
-que pode ser usado para gerar novos **Antimatter Block**, ou pode ser usado como componente para crafts. Para chegar ao tier **Nova**, você deve fabricar o **Blackhole**, após isso
-você deve dropar 1x **Blackhole** e 64x **Darklight Bars**, com isso você ganha 1x **Nova Fragment**
+Em seguida, monte a **Event Horizon Forge**. Utilize-a para condensar Antimatéria em um **Black Hole** (Singularity Condensation) e, a partir do Black Hole, transmute **Darklight Bars** em **Nova Fragments** (Event Horizon Transmutation).
 
 ## Zenith
 

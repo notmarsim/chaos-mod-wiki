@@ -1,0 +1,18 @@
+{
+  "en_us": {
+    "block.chaosmod.nova_reactor_chamber": "Nova Reactor Chamber",
+    "gui.chaosmod.nova.requires_fuel": "Add fuel before starting the reactor.",
+    "gui.chaosmod.nova.start_blocked_structure": "Complete the reactor structure before starting.",
+    "gui.chaosmod.nova.start_blocked_scram": "Reset SCRAM before starting the reactor.",
+    "message.chaosmod.nova.item_mode.input": "Nova Reactor Item Port: Input",
+    "message.chaosmod.nova.item_mode.output": "Nova Reactor Item Port: Output"
+  },
+  "pt_br": {
+    "block.chaosmod.nova_reactor_chamber": "Câmara do Reator Nova",
+    "gui.chaosmod.nova.requires_fuel": "Adicione combustível antes de ligar o reator.",
+    "gui.chaosmod.nova.start_blocked_structure": "Complete a estrutura antes de ligar o reator.",
+    "gui.chaosmod.nova.start_blocked_scram": "Redefina o SCRAM antes de ligar o reator.",
+    "message.chaosmod.nova.item_mode.input": "Porta de Itens do Reator Nova: Entrada",
+    "message.chaosmod.nova.item_mode.output": "Porta de Itens do Reator Nova: Saída"
+  }
+}

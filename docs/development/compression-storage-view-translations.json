@@ -1,0 +1,34 @@
+{
+  "en_us": {
+    "block.chaosmod.gravitational_compression_terminal": "Gravitational Compression Terminal",
+    "gui.chaosmod.compression.storage_title": "Stored materials (%s)",
+    "gui.chaosmod.compression.storage_counts": "Raw: %s | Packed: %s",
+    "gui.chaosmod.compression.storage_page": "Page %s / %s",
+    "gui.chaosmod.compression.storage_raw_exact": "Original units: %s",
+    "gui.chaosmod.compression.storage_packed_exact": "Compressed Matter %s: %s",
+    "gui.chaosmod.compression.storage_selected": "Selected for processing",
+    "gui.chaosmod.compression.storage_select": "Click to select this material.",
+    "gui.chaosmod.compression.storage_stop_select": "Stop processing to change the selected material.",
+    "gui.chaosmod.compression.deposit_hint": "Stored virtually",
+    "gui.chaosmod.compression.state.validating": "Validating multiblock...",
+    "gui.chaosmod.compression.missing_core": "No Compression Core found beneath this terminal.",
+    "gui.chaosmod.compression.no_material": "Storage is empty",
+    "tooltip.chaosmod.compressed_matter.units": "Contains %s original units. Decompress in the Gravitational Compression Terminal."
+  },
+  "pt_br": {
+    "block.chaosmod.gravitational_compression_terminal": "Terminal de Compressão Gravitacional",
+    "gui.chaosmod.compression.storage_title": "Materiais armazenados (%s)",
+    "gui.chaosmod.compression.storage_counts": "Bruto: %s | Compactado: %s",
+    "gui.chaosmod.compression.storage_page": "Página %s / %s",
+    "gui.chaosmod.compression.storage_raw_exact": "Unidades originais: %s",
+    "gui.chaosmod.compression.storage_packed_exact": "Matéria Comprimida %s: %s",
+    "gui.chaosmod.compression.storage_selected": "Selecionado para processamento",
+    "gui.chaosmod.compression.storage_select": "Clique para selecionar este material.",
+    "gui.chaosmod.compression.storage_stop_select": "Pare o processamento para mudar o material selecionado.",
+    "gui.chaosmod.compression.deposit_hint": "Armazenamento virtual",
+    "gui.chaosmod.compression.state.validating": "Validando multibloco...",
+    "gui.chaosmod.compression.missing_core": "Nenhum Compression Core encontrado abaixo deste terminal.",
+    "gui.chaosmod.compression.no_material": "Armazenamento vazio",
+    "tooltip.chaosmod.compressed_matter.units": "Contém %s unidades originais. Descomprima no Terminal de Compressão Gravitacional."
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "en_us": {
+    "block.chaosmod.nova_reactor_waste_fluid_port": "Nova Reactor Waste Fluid Port",
+    "gui.chaosmod.nova.exported": "Energy exported",
+    "gui.chaosmod.nova.active_segments": "Active fuel segments",
+    "gui.chaosmod.nova.validating": "Validating",
+    "gui.chaosmod.nova.unloaded": "Chunks unloaded",
+    "gui.chaosmod.nova.validation_progress": "Validation: %s / %s",
+    "gui.chaosmod.nova.waste_internal": "Waste: Internal Processing",
+    "gui.chaosmod.nova.waste_external": "Waste: External Extraction"
+  },
+  "pt_br": {
+    "block.chaosmod.nova_reactor_waste_fluid_port": "Porta de Resíduos do Reator Nova",
+    "gui.chaosmod.nova.exported": "Energia exportada",
+    "gui.chaosmod.nova.active_segments": "Segmentos ativos",
+    "gui.chaosmod.nova.validating": "Validando",
+    "gui.chaosmod.nova.unloaded": "Chunks descarregados",
+    "gui.chaosmod.nova.validation_progress": "Validação: %s / %s",
+    "gui.chaosmod.nova.waste_internal": "Resíduos: Processamento Interno",
+    "gui.chaosmod.nova.waste_external": "Resíduos: Extração Externa"
+  }
+}

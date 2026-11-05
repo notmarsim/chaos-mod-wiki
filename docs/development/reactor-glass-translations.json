@@ -1,0 +1,10 @@
+{
+  "en_us": {
+    "block.chaosmod.nova_reactor_chamber": "Nova Reactor Casing",
+    "block.chaosmod.nova_reactor_glass": "Nova Reactor Glass"
+  },
+  "pt_br": {
+    "block.chaosmod.nova_reactor_chamber": "Carcaça do Reator Nova",
+    "block.chaosmod.nova_reactor_glass": "Vidro do Reator Nova"
+  }
+}

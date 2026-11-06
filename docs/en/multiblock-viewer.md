@@ -1,6 +1,6 @@
 # Multiblock Viewer
 
-The **Multiblock Viewer** plans structures and projects a construction guide into the world. Craft it at the **Void** tier, supply FE, and right-click it to open the library. It never places blocks or spends construction materials.
+The **Multiblock Viewer** plans structures and projects a construction guide into the world. Craft it at the **Void** tier, supply FE, and right-click it to open the library. Survival construction is manual. Creative players can explicitly enable automatic construction.
 
 ## Power
 
@@ -41,7 +41,8 @@ The library covers:
 | Nova Reactor | Size, fuel-column count, spacing and offsets |
 | Nova Waste Reprocessor | Independent waste/dust tower heights |
 | Gravitational Compression | Fixed structure and flexible exterior interfaces |
-| Zenith Accelerator | Track, curves, Input and central Rod |
+| Zenith Accelerator | 49 × 5 × 49 structure; flexible three-block interface columns |
+| Reality Devourer | Output ports on the flat interiors of the energy housing faces |
 | Reality Gateway | Frame and Terminal |
 
 The Viewer does not grant access to recipes or bypass the actual machine's tier, construction or operating rules.
@@ -82,6 +83,14 @@ Default controls are rebindable in Minecraft's controls menu:
 
 Each player has their own saved projects, with one active at a time. **Projects** allows resuming or deleting them. Closing the screen, disconnecting or restarting the server does not erase a project. A stopped project can be resumed from a powered Viewer.
 
-The server owns project validity and FE consumption. Placement controls describe a guide; they cannot create blocks, consume other players' materials or alter machine inventories. Projects can refer to another loaded dimension, but neither their source nor construction chunks are kept loaded automatically.
+The server owns project validity and FE consumption. Survival placement controls describe a guide and cannot create blocks or alter machine inventories. Projects can refer to another loaded dimension, but neither their source nor construction chunks are kept loaded automatically.
+
+## Creative automatic construction
+
+In Creative mode, enable **Auto Build** in the structure preview, click **Build**, position the projection and confirm it. You can also use **Alt + G** during placement or on your active project to toggle/start/cancel construction. This key can be rebound.
+
+The server checks Creative mode throughout the job. It first checks the site, then places blocks gradually to avoid a large server tick. Chunks must already be loaded. Existing inventories and obstructing terrain are preserved, and protection-mod placement vetoes are respected. The guide reports obstructions or unloaded areas rather than clearing them. Completed cable placement is followed by connection configuration.
+
+Construction stops when its owner leaves Creative mode, disconnects, cancels, or its source Viewer unloads. Saved project plans survive a restart, but automatic placement never restarts by itself. Normal Viewer power requirements still apply.
 
 Energy, work budgets, cache sizes, rendering distance and project limits are configured in `chaosmod-multiblock-viewer.toml`. A cache-budget warning asks the operator to increase the technical budget for an enormous project; it does not change the multiblock's legal construction dimensions.

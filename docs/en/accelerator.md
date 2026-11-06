@@ -2,51 +2,31 @@
 
 [Português](../pt/accelerator.md)
 
-The accelerator consumes a large amount of FE to produce **Reality Condensate**, which starts the dimensional-core progression.
+The current Zenith Accelerator is a **49 × 5 × 49** multiblock. It uses Zenith Bars to generate FE and Reality Condensate. Supply external FE for ignition, then maintain fuel and output space. Energy values and phase durations are configurable in `chaosmod-zenith-accelerator.toml`.
 
-## Build a horizontal 7×7 ring
+## Construction
 
-Use **four corners**, **nineteen straight segments**, **one Input** in the middle of a side and **one Center Rod** in the center. Keep the interior clear except for the rod, and keep the structure on one horizontal layer.
+Select **Zenith Accelerator** in the [Multiblock Viewer](multiblock-viewer.md) for the full layered layout and materials. It uses its own Casing, Foundation, Acceleration Coils, Containment Coils/Pylons, Beam Guides and Reaction Core. Keep the marked beam channels clear.
 
-```text
-C S S S S S C
-S . . . . . S
-S . . . . . S
-S . . R . . I
-S . . . . . S
-S . . . . . S
-C S S S S S C
-```
+Terminal, Fuel Injector and Energy Output Ports occupy the four interface columns at X/Z **(7,7), (41,7), (7,41), (41,41)**, using **Y1–Y3** relative to the structure origin. The old terminal/injector positions are casing. Install exactly **one Terminal**, at least **one Fuel Injector** and at least **four Energy Output Ports**. Additional ports share the existing aggregate output limit.
 
-`C` = corner, `S` = straight segment, `I` = Input, `R` = Center Rod, `.` = air. Rotate pieces so their connections form a continuous loop. The Input's branch must point toward the rod; the rod lies three blocks counterclockwise from the Input's facing.
+## Operation
 
-![Zenith Accelerator](../assets/zenith_accelerator.png)
+Supply FE and Zenith Bars through a Fuel Injector, or use the terminal inventory. Compressed Zenith Bars are accepted through the existing compressed-matter system. The Injector also exposes the Reality Condensate output for item transport.
 
-## Supply energy and material
+Click **Start**. The machine progresses through Ignition, Acceleration and Convergence before Generating. Select its power and monitor energy, fuel, output and structural diagnostics. **Stop** initiates shutdown/cooldown. Blocked output or insufficient resources prevent further production.
 
-Feed **Zenith** or **Zenith Bars** to the Input and replenish them during operation. The Input holds **512 million FE** and uses **8 million FE per paid work tick**. Its UI has an energy bar with stored energy details.
+The ring, beams and central reaction object are visual effects. Their positions follow the real beam channels and the machine's rotation.
 
-Beam charge and stored FE are separate measurements. With insufficient FE, progress and material consumption pause. Missing material below 50% beam charge causes charge to decay; at or above 50%, the current charge can be used for collision. Reaching 100% also arms collision. The beam finishes its remaining travel before injection.
+## Retired components
 
-Use the [Controller](controller.md)'s **Release** rule for a chosen collision threshold between 50% and 100%. Energy reserve, input material and collector capacity have their own rules.
+The former **Accelerator Input, Center Accelerator Rod, straight segment and curve** are removed from the creative tab, JEI ingredient list and production recipes. Their registry entries remain readable to preserve existing worlds and inventories.
 
-## Collect the result
+| Retired component | One-way crafting conversion |
+| --- | --- |
+| Center Accelerator Rod | Zenith Reaction Core |
+| Accelerator Input | Zenith Accelerator Terminal |
+| Straight segment | Zenith Acceleration Coil |
+| Curve | Zenith Accelerator Foundation |
 
-### Material efficiency
-
-One Zenith Bar represents **11 Zenith**. The accelerator consumes bars at **1/11 of the Zenith item rate**, while retaining their collision bonuses. An uninterrupted full-charge cycle consumes approximately **44 Zenith or 4 Zenith Bars**: the bar route produces 2.5 times the condensate (rounded down) and recovers 3 times the FE, rewarding the additional ingredients needed to craft bars. Keep at least **45 Zenith or 5 bars** available to avoid triggering early release when the input becomes empty; unused items remain in the Input. Partial charges use the same consumption ratio.
-
-Reality Condensate drops **above the Center Rod**. Automate collection there. The collision's explosion effect does not destroy the structure or the produced item.
-
-| Collision charge | Zenith yield | Zenith Bar yield |
-|---|---:|---:|
-| 50% | 1 | 2 |
-| 60% | 2 | 5 |
-| 70% | 4 | 10 |
-| 80% | 8 | 20 |
-| 90% | 16 | 40 |
-| 100% | 32 | 80 |
-
-At full charge, the rod recovers 250 million FE for Zenith or 750 million FE for Zenith Bars, much less than the energy spent on the cycle. Removing or invalidating structure parts aborts the cycle.
-
-**Next:** craft Reality Core vessels and use the [Reality Extractor](extractor.md).
+Old saved blocks remain compatible; new installations should use the current multiblock.

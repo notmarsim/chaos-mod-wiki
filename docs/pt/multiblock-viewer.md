@@ -1,6 +1,6 @@
 # Multiblock Viewer
 
-O **Multiblock Viewer** permite planejar estruturas e projetar um guia de construção no mundo. Fabrique-o no **tier Void**, forneça FE e clique com o botão direito para abrir a biblioteca. Ele não coloca blocos nem gasta materiais de construção.
+O **Multiblock Viewer** permite planejar estruturas e projetar um guia de construção no mundo. Fabrique-o no **tier Void**, forneça FE e clique com o botão direito para abrir a biblioteca. No sobrevivência, a construção é manual. Jogadores no criativo podem ativar explicitamente a construção automática.
 
 ## Energia
 
@@ -41,7 +41,8 @@ A biblioteca inclui:
 | Nova Reactor | Tamanho, quantidade, espaçamento e deslocamento das colunas de combustível |
 | Nova Waste Reprocessor | Alturas independentes das torres de resíduos e pó |
 | Gravitational Compression | Estrutura fixa e interfaces externas flexíveis |
-| Zenith Accelerator | Pista, curvas, Input e Rod central |
+| Zenith Accelerator | Estrutura de 49 × 5 × 49; colunas flexíveis de três blocos para interfaces |
+| Reality Devourer | Saídas nas partes planas das faces dos energy housings |
 | Reality Gateway | Moldura e Terminal |
 
 O Viewer não libera receitas nem contorna as regras de tier, construção ou operação das máquinas.
@@ -82,6 +83,14 @@ Os atalhos podem ser alterados nas configurações de controles do Minecraft:
 
 Cada jogador possui seus próprios projetos, com um ativo por vez. A página **Projetos** permite retomar ou excluir construções. Fechar a interface, desconectar ou reiniciar o servidor não apaga o projeto. Um projeto parado pode ser retomado em um Viewer energizado.
 
-O servidor controla a validade e o consumo de FE. Os comandos descrevem apenas um guia: não criam blocos, não gastam materiais de outros jogadores e não alteram inventários das máquinas. Os projetos podem apontar para outra dimensão carregada, mas nem a origem nem o local de construção mantêm chunks carregados automaticamente.
+O servidor controla a validade e o consumo de FE. No sobrevivência, os comandos descrevem apenas um guia: não criam blocos nem alteram inventários das máquinas. Os projetos podem apontar para outra dimensão carregada, mas nem a origem nem o local de construção mantêm chunks carregados automaticamente.
+
+## Construção automática no criativo
+
+No criativo, ative **Construção automática** na prévia, clique em **Construir**, posicione a projeção e confirme. Também é possível usar **Alt + G** durante o posicionamento ou no projeto ativo para alternar/iniciar/cancelar a construção. A tecla pode ser alterada nos controles.
+
+O servidor verifica o modo criativo durante toda a operação. Primeiro confere o local e depois coloca os blocos gradualmente, evitando concentrar o trabalho em um tick. Os chunks precisam estar carregados. Inventários existentes e terrenos que obstruem a montagem são preservados, e cancelamentos de proteção de outros mods são respeitados. O guia informa obstruções ou áreas descarregadas em vez de limpá-las. Após a colocação dos cabos, suas conexões são configuradas.
+
+A construção para se o proprietário sair do criativo, desconectar, cancelar ou se o Viewer de origem for descarregado. O plano salvo permanece após reiniciar, mas a colocação automática nunca recomeça sozinha. A exigência normal de energia do Viewer continua valendo.
 
 Energia, orçamentos de trabalho, cache, distância de renderização e limites de projetos ficam em `chaosmod-multiblock-viewer.toml`. Um aviso de limite de cache pede aumentar o orçamento técnico para projetos enormes; isso não altera as dimensões legais do multibloco.
